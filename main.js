@@ -352,6 +352,7 @@ addPressureBtn.addEventListener("click", addAirPressureMachine);
 
 // ------------------ Incubation Simulation ------------------
 function runIncubationSimulation(data) {
+  alert('look in the console in your browser for simulation data')
   console.log("🛰️ Starting fixed incubation simulation...");
 
   const PX_TO_METER = 1 / 50;
@@ -546,7 +547,7 @@ document.getElementById("ResourcesimulateBtn").addEventListener("click", () => {
       result[key] = `❌ ${key} insufficient, can survive ${days} day(s)`;
     }
   });
-
+ alert('look in the console in your browser for simulation data')
   console.log("🛰️ Resource Simulation Result:");
   console.table(result);
 });
