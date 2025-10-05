@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mars Habitat Planner</title>
+  <style>
+    body {
+      margin: 0;
+      background: #121212;
+      color: white;
+      font-family: Arial;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+    #left-panel {
+      width: 20%;
+      background: #1e1e1e;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border-right: 2px solid #333;
+    }
+    #canvas-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+      overflow: hidden;
+    }
+    #myCanvas {
+      width: 100%;
+      height: 100%;
+      background: #000;
+    }
+    #right-panel {
+      width: 20%;
+      background: #1e1e1e;
+      padding: 20px;
+      border-left: 2px solid #333;
+      overflow-y: auto;
+    }
+    button {
+      background: #2ea3d1;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-bottom: 6px;
+    }
+    button:hover {
+      background: #130cde;
+    }
+    #room-details button {
+      display: block;
+      width: 100%;
+    }
+    input[type="file"] {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="left-panel">
+    <h2>➕ Add Items</h2>
+<button id="addRoomBtn">➕ Add Room</button>
+<button id="addFurnitureBtn">🛋️ Add Furniture</button>
+<button id="addEnergyBtn">⚡ Add Energy</button>
+<button id="addSurvivalBtn">❤️ Life Support</button>
+<button id="addHeaterBtn">🔥 Add Heater</button>
+<button id="addPreasureBtn">🔥 Add Preasure</button>
+<button id="addElectronics">Electronics</button>
+    <h2>🚚 Import / Export</h2>
+    <button id="exportBtn">⬇️ Export Data</button>
+    <button id="importBtn">⬆️ Import Data</button>
+    <input type="file" id="importFile" accept=".json" />
+
+      <h2>▶️ Simulation</h2>
+  <button id="simulateBtn">▶️ Incubation Simulate</button>
+   <button id="ResourcesimulateBtn">▶️ ResourceSimulate</button>
+  <style>
+    #left-panel {
+  font-size: 14px; /* default is ~16px, so this makes it slightly smaller */
+}
+
+#left-panel h2 {
+  font-size: 16px; /* keep section headers a bit larger than buttons */
+}
+
+#left-panel button {
+  font-size: 13px; /* make buttons compact */
+  padding: 6px 10px; /* optional: reduce padding */
+}
+  </style>
+  </div>
+
+  <div id="canvas-container">
+    <canvas id="myCanvas"></canvas>
+  </div>
+
+  <div id="right-panel">
+    <h2>Properties</h2>
+    <div id="room-details"><p>Select an object on the canvas.</p></div>
+  </div>
+
+  <!-- Fabric.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
+  <script src="main.js"></script>
+
+
+
+   
+  </script>
+</body>
+</html>
+
